@@ -19,13 +19,13 @@ int binary_tree_balance(const binary_tree_t *tree)
 		return (0);
 	}
 
-	while (aux)
+	while (aux->left)
 	{
 		h_left++;
 		aux = aux->left;
 	}
 
-	while (tree)
+	while (tree->right)
 	{
 		h_right++;
 		tree = tree->right;
