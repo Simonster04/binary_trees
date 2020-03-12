@@ -43,16 +43,12 @@ int binary_tree_is_full(const binary_tree_t *tree)
 	s_left = binary_tree_size(tree->left);
 	s_right = binary_tree_size(tree->right);
 
-	if (s_left == 0 || s_right == 0)
+	if (s_left != s_right)
 	{
 		return (0);
-	}
-	if (s_left == s_right)
-	{
-		return (1);
 	}
 	else
 	{
-		return (0);
+		return (1);
 	}
 }
